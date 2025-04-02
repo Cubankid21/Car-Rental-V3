@@ -1,0 +1,36 @@
+/* Theme variables */
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #000000;
+  --text-secondary: #4b5563;
+  --border-color: rgb(96 165 250);
+  --hover-bg: rgba(219, 234, 254, 0.2);
+}
+
+:root.dark {
+  --bg-primary: #000000;
+  --text-primary: #ffffff;
+  --text-secondary: #9ca3af;
+  --border-color: rgb(96 165 250);
+  --hover-bg: rgba(30, 58, 138, 0.2);
+}
+
+/* Apply theme styles */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.bg-black {
+  background-color: var(--bg-primary);
+}
+
+.text-white {
+  color: var(--text-primary);
+}
+
+.text-gray-300,
+.text-gray-400 {
+  color: var(--text-secondary);
+}

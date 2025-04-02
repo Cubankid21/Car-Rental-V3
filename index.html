@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Service</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-black">
+       <!-- Navigation -->
+       <!-- Navigation -->
+       <nav class="bg-black p-4">
+           <div class="container mx-auto flex items-center justify-between">
+               <div class="flex items-center">
+                   <img src="images/logo.png" alt="Vativu Logo" class="h-16">
+               </div>
+               
+               <!-- In the navigation section -->
+               <div class="hidden lg:flex space-x-12">
+                   <a href="#" class="text-white hover:text-blue-400 transition-colors duration-300 text-lg font-medium">Home</a>
+                   <a href="#packages" class="text-white hover:text-blue-400 transition-colors duration-300 text-lg font-medium">Packages</a>
+                   <a href="#footer" class="text-white hover:text-blue-400 transition-colors duration-300 text-lg font-medium">Contact</a>
+               </div>
+               
+               <!-- Mobile menu button -->
+               <button class="lg:hidden">
+                   <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24">
+                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                   </svg>
+               </button>
+           </div>
+           
+           <!-- Mobile Menu (Hidden by default) -->
+           <div class="lg:hidden hidden">
+               <div class="flex flex-col items-center space-y-4 pt-4">
+                   <a href="#" class="text-white hover:text-blue-400 transition-colors duration-300">Home</a>
+                   <a href="#packages" class="text-white hover:text-blue-400 transition-colors duration-300">Packages</a>
+                   <a href="#contact" class="text-white hover:text-blue-400 transition-colors duration-300 text-lg font-medium">Contact</a>
+               </div>
+           </div>
+       </nav>
+<!-- Hero Section -->
+<section class="relative bg-white text-black min-h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('images/bmw.png');">
+    <div class="absolute inset-0 bg-black/40 animate-fade-in"></div>
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center" style="margin-top: -290px;">
+            <h1 class="text-6xl md:text-7xl font-bold mb-8 text-white animate-slide-up opacity-0">
+                We are looking to serve people a safe travel.
+            </h1>
+            <div class="text-4xl md:text-5xl mt-6 animate-slide-up-delayed opacity-0">
+                <span class="text-blue-400 font-medium">
+                    Safety is our Priority
+                </span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Add this style section right after the hero section -->
+<style>
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in {
+        animation: fadeIn 1.5s ease-out forwards;
+    }
+
+    .animate-slide-up {
+        animation: slideUp 1s ease-out forwards;
+        animation-delay: 0.5s;
+    }
+
+    .animate-slide-up-delayed {
+        animation: slideUp 1s ease-out forwards;
+        animation-delay: 1s;
+    }
+</style>
+    <!-- About Us Section -->
+    <section class="py-20 px-6">
+        <h2 class="text-4xl text-center font-extrabold mb-10 text-blue-400">About Us</h2>
+        <p class="text-center max-w-4xl mx-auto text-2xl font-medium leading-relaxed">
+            At Map & Route Travels, we offer premium hassle-free travel experiences, ensuring comfort, safety, and luxury. Based in Coimbatore, we specialize in outstation trips, corporate travel, city tours, and customized travel packages with top-class vehicles and professional chauffeurs.
+        </p>
+    </section>
+
+    <!-- Services Section -->   
+<section class="py-16 px-4 bg-white">
+    <h2 class="text-4xl text-center font-bold mb-12 text-blue-400">Our Services & Benefits</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="text-center p-6 bg-white rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-blue-400 shadow-lg shadow-blue-400/20">
+            <i class="fas fa-crown text-4xl text-blue-400 mb-4"></i>
+            <h3 class="font-bold mb-3 text-blue-400 text-xl">Luxury & Comfort</h3>
+            <p class="text-sm text-gray-600">Premium vehicles with elegant features for an exceptional journey</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-blue-400 shadow-lg shadow-blue-400/20">
+            <i class="fas fa-user-tie text-4xl text-blue-400 mb-4"></i>
+            <h3 class="font-bold mb-3 text-blue-400 text-xl">Experienced Chauffeurs</h3>
+            <p class="text-sm text-gray-600">Professional and courteous drivers at your service</p>
+        </div>
+
+        <div class="text-center p-6 bg-white rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-blue-400 shadow-lg shadow-blue-400/20">
+            <i class="fas fa-shield-alt text-4xl text-blue-400 mb-4"></i>
+            <h3 class="font-bold mb-3 text-blue-400 text-xl">Safety First</h3>
+            <p class="text-sm text-gray-600">Your safety is our unwavering commitment</p>
+        </div>
+        <div class="text-center p-6 bg-white rounded-xl hover:transform hover:scale-105 transition-all duration-300 border border-blue-400 shadow-lg shadow-blue-400/20">
+            <i class="fas fa-tags text-4xl text-blue-400 mb-4"></i>
+            <h3 class="font-bold mb-3 text-blue-400 text-xl">Affordable Price</h3>
+            <p class="text-sm text-gray-600">Premium service at competitive rates</p>
+        </div>
+    </div>
+</section>
+
+<section class="py-16 px-4 bg-white">
+    <h2 class="text-4xl text-center font-bold mb-16 text-blue-400 relative">
+        Our Premium Services
+        <div class="absolute w-24 h-1 bg-blue-400 bottom-0 left-1/2 transform -translate-x-1/2 mt-4"></div>
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div class="group bg-white rounded-xl p-8 transform transition-all duration-500 hover:scale-105 hover:bg-blue-50 border border-blue-400/30 hover:border-blue-400">
+            <div class="relative">
+                <div class="w-20 h-20 bg-blue-400/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-pulse">
+                    <svg class="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-blue-400 mb-4 text-center">Outstation Travel</h3>
+                <p class="text-gray-600 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">Experience seamless long-distance journeys with our comprehensive travel packages</p>
+            </div>
+        </div>
+
+        <div class="group bg-white rounded-xl p-8 transform transition-all duration-500 hover:scale-105 hover:bg-blue-50 border border-blue-400/30 hover:border-blue-400">
+            <div class="relative">
+                <div class="w-20 h-20 bg-blue-400/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-pulse">
+                    <svg class="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-blue-400 mb-4 text-center">Airport Transfer</h3>
+                <p class="text-gray-600 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">Punctual and comfortable airport pickup and drop services</p>
+            </div>
+        </div>
+
+        <div class="group bg-white rounded-xl p-8 transform transition-all duration-500 hover:scale-105 hover:bg-blue-50 border border-blue-400/30 hover:border-blue-400">
+            <div class="relative">
+                <div class="w-20 h-20 bg-blue-400/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-pulse">
+                    <svg class="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-blue-400 mb-4 text-center">Special Events</h3>
+                <p class="text-gray-600 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">Elegant transportation solutions for weddings and corporate events</p>
+            </div>
+        </div>
+
+        <div class="group bg-white rounded-xl p-8 transform transition-all duration-500 hover:scale-105 hover:bg-blue-50 border border-blue-400/30 hover:border-blue-400">
+            <div class="relative">
+                <div class="w-20 h-20 bg-blue-400/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:animate-pulse">
+                    <svg class="w-10 h-10 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-bold text-blue-400 mb-4 text-center">Employee Transit</h3>
+                <p class="text-gray-600 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">Reliable and safe transportation for your workforce</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Packages Section -->
+    <section class="py-16 px-4 bg-white">
+        <h2 class="text-3xl text-center font-bold mb-12 text-blue-400">Vehicles we offer</h2>
+        <div class="relative max-w-6xl mx-auto">
+            <div class="flex overflow-x-auto gap-6 pb-8 snap-x">
+                <div class="flex-none w-72 snap-center relative group">
+                    <img src="images/temple.jpg" alt="Chennai" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-black/50 rounded-lg flex flex-col justify-end">
+                        <div class="p-4 space-y-2">
+                            <p class="text-white text-xl font-bold">Temple Package</p>
+                            <p class="text-blue-400 text-sm">(2 Days)</p>
+                            <div class="overflow-y-auto transition-all duration-300 max-h-0" id="templeDetails" style="scrollbar-width: thin; scrollbar-color: #60A5FA transparent;">
+                                <ul class="text-gray-200 text-sm space-y-1 list-disc list-inside mb-2 pr-2">
+                                    <li>Sri Ranganathaswamy Temple, Srirangam</li>
+                                    <li>Jambukeswarar Temple, Thiruvanaikaval</li>
+                                    <li>Rock Fort Temple</li>
+                                    <li>Brihadeeswarar Temple</li>
+                                    <li>Thanjavur Maratha Palace</li>
+                                    <li>Adi Kumbeswarar Temple</li>
+                                    <li>Sarangapani Temple</li>
+                                    <li>Saniswaran Temple</li>
+                                </ul>
+                            </div>
+                            <button onclick="toggleDetails('templeDetails', this)" class="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">
+                                View More →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-none w-72 snap-center relative group">
+                    <img src="images/madurai.png" alt="madurai" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-black/50 rounded-lg flex flex-col justify-end">
+                        <div class="p-4 space-y-2">
+                            <p class="text-white text-xl font-bold">Palani & Madurai Package</p>
+                            <p class="text-blue-400 text-sm">(2 Days)</p>
+                            <div class="overflow-y-auto transition-all duration-300 max-h-0" id="maduraiDetails" style="scrollbar-width: thin; scrollbar-color: #60A5FA transparent;">
+                                <ul class="text-gray-200 text-sm space-y-1 list-disc list-inside mb-2 pr-2">
+                                    <li>Palani Murugan Temple</li>
+                                    <li>Meenakshi Amman Temple</li>
+                                    <li>Thirumalai Nayakkar Mahal</li>
+                                    <li>Alagar Kovil Temple</li>
+                                    <li>Pazhamudir Solai Temple</li>
+                                    <li>Thiruparankundram Murugan Temple</li>
+                                </ul>
+                            </div>
+                            <button onclick="toggleDetails('maduraiDetails', this)" class="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">
+                                View More →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-none w-72 snap-center relative group">
+                    <img src="images/ooty.png" alt="Ooty" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-black/50 rounded-lg flex flex-col justify-end">
+                        <div class="p-4 space-y-2">
+                            <p class="text-white text-xl font-bold">Nilgiris Package</p>
+                            <p class="text-blue-400 text-sm">(3 Days)</p>
+                            <div class="overflow-y-auto transition-all duration-300 max-h-0" id="ootyDetails" style="scrollbar-width: thin; scrollbar-color: #60A5FA transparent;">
+                                <ul class="text-gray-200 text-sm space-y-1 list-disc list-inside mb-2 pr-2">
+                                    <li>Ooty Lake & Boating</li>
+                                    <li>Botanical Garden & Rose Garden</li>
+                                    <li>Doddabetta Peak</li>
+                                    <li>Nilgiri Toy Train ride</li>
+                                    <li>Sim's Park & Tea Factory Visit</li>
+                                    <li>Dolphin's Nose & Lamb's Rock</li>
+                                    <li>Pykara Lake & Waterfalls</li>
+                                </ul>
+                            </div>
+                            <button onclick="toggleDetails('ootyDetails', this)" class="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">
+                                View More →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-none w-72 snap-center relative group">
+                    <img src="images/kanyakuamri.png" alt="South Indian temple" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-black/50 rounded-lg flex flex-col justify-end">
+                        <div class="p-4 space-y-2">
+                            <p class="text-white text-xl font-bold">South Tamil Nadu Package</p>
+                            <p class="text-blue-400 text-sm">(3 Days)</p>
+                            <div class="overflow-y-auto transition-all duration-300 max-h-0" id="southDetails" style="scrollbar-width: thin; scrollbar-color: #60A5FA transparent;">
+                                <ul class="text-gray-200 text-sm space-y-1 list-disc list-inside mb-2 pr-2">
+                                    <li>Tiruchendur Arulmigu Subramaniya Swamy Temple</li>
+                                    <li>Vivekananda Rock Memorial & Thiruvalluvar Statue</li>
+                                    <li>Rameswaram Ramanathaswamy Temple</li>
+                                    <li>Pamban Bridge and Dhanushkodi</li>
+                                </ul>
+                            </div>
+                            <button onclick="toggleDetails('southDetails', this)" class="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">
+                                View More →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-none w-72 snap-center relative group">
+                    <img src="images/Kodaikanal.webp" alt="Kodaikanal" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-black/50 rounded-lg flex flex-col justify-end">
+                        <div class="p-4 space-y-2">
+                            <p class="text-white text-xl font-bold">Kodaikanal Package</p>
+                            <p class="text-blue-400 text-sm">(2 Days)</p>
+                            <div class="overflow-y-auto transition-all duration-300 max-h-0" id="kodaiDetails" style="scrollbar-width: thin; scrollbar-color: #60A5FA transparent;">
+                                <ul class="text-gray-200 text-sm space-y-1 list-disc list-inside mb-2 pr-2">
+                                    <li>Kodaikanal Lake</li>
+                                    <li>Coaker's Walk</li>
+                                    <li>Silver Cascade Waterfalls</li>
+                                    <li>Bryant Park</li>
+                                    <li>Pillar Rocks</li>
+                                    <li>Bear Shola Falls</li>
+                                    <li>Guna Caves</li>
+                                </ul>
+                            </div>
+                            <button onclick="toggleDetails('kodaiDetails', this)" class="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">
+                                View More →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-none w-72 snap-center relative group">
+                    <img src="images/munnar.webp" alt="Munnar" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-black/50 rounded-lg flex flex-col justify-end">
+                        <div class="p-4 space-y-2">
+                            <p class="text-white text-xl font-bold">Munnar Package</p>
+                            <p class="text-blue-400 text-sm">(2 Days)</p>
+                            <div class="overflow-y-auto transition-all duration-300 max-h-0" id="munnarDetails" style="scrollbar-width: thin; scrollbar-color: #60A5FA transparent;">
+                                <ul class="text-gray-200 text-sm space-y-1 list-disc list-inside mb-2 pr-2">
+                                    <li>Tea Gardens & Tea Museum</li>
+                                    <li>Eravikulam National Park</li>
+                                    <li>Mattupetty Dam & Lake</li>
+                                    <li>Echo Point</li>
+                                    <li>Top Station</li>
+                                    <li>Attukal & Lakkam Waterfalls</li>
+                                    <li>Kundala Lake</li>
+                                </ul>
+                            </div>
+                            <button onclick="toggleDetails('munnarDetails', this)" class="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">
+                                View More →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+<div class="flex items-center">
+    <div class="flex-none w-72 snap-center relative group">
+        <img src="images/valparai.jpg" alt="Valparai" class="w-full h-64 object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-black/50 rounded-lg flex flex-col justify-end">
+            <div class="p-4 space-y-2">
+                <p class="text-white text-xl font-bold">Valparai Package</p>
+                <p class="text-blue-400 text-sm">(2 Days)</p>
+                <div class="overflow-y-auto transition-all duration-300 max-h-0" id="valparaiDetails" style="scrollbar-width: thin; scrollbar-color: #60A5FA transparent;">
+                    <ul class="text-gray-200 text-sm space-y-1 list-disc list-inside mb-2 pr-2">
+                        <li>Aliyar Dam</li>
+                        <li>Monkey falls</li>
+                        <li>Loam's Viewpoint</li>
+                        <li>Valparai Tea Estates</li>
+                        <li>Balaji Temple</li>
+                        <li>Nallamudi Viewpoint</li>
+                        <li>Sholayar Dam</li>
+                        <li>Chinna Kallar Falls</li>
+                    </ul>
+                </div>
+                <button onclick="toggleDetails('valparaiDetails', this)" class="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">
+                    View More →
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="flex-none w-72 snap-center relative group ml-4">
+        <img src="images/tirupattttttiiiiiii.jpeg" alt="Tirupati" class="w-full h-64 object-cover rounded-lg shadow-lg">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-black/50 rounded-lg flex flex-col justify-end">
+            <div class="p-4 space-y-2">
+                <p class="text-white text-xl font-bold">Tirupati & Vellore Golden Temple Package</p>
+                <p class="text-blue-400 text-sm">(2 Days)</p>
+                <div class="overflow-y-auto transition-all duration-300 max-h-0" id="tirupatiDetails" style="scrollbar-width: thin; scrollbar-color: #60A5FA transparent;">
+                    <ul class="text-gray-200 text-sm space-y-1 list-disc list-inside mb-2 pr-2">
+                        <li>Sri Venkateswara Temple, Tirupati</li>
+                        <li>Padmavathi Temple, Tiruchanur</li>
+                        <li>Loam's Viewpoint</li>
+                        <li>Sri Kalahasti Temple</li>
+                        <li>Vellore Golden Temple (Sripuram)</li>
+                    </ul>
+                </div>
+                <button onclick="toggleDetails('tirupatiDetails', this)" class="text-blue-400 hover:text-blue-300 text-sm font-medium transition-colors duration-300">
+                    View More →
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+            <!-- View All Packages Button -->
+            <div class="flex justify-center mt-8" id="viewAllButton">
+                <button onclick="toggleAllPackages()" class="bg-blue-400 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-lg transition duration-300 transform hover:scale-105">
+                    View All Packages
+                </button>
+            </div>
+
+            <!-- Additional Package Cards (Initially Hidden) -->
+            <div id="additionalPackages" class="hidden mt-12">
+                <div class="flex overflow-x-auto gap-6 pb-8 snap-x">
+                    <!-- Kerala Packages -->
+                    <div class="flex-none w-72 snap-center relative group">
+                        <img src="images/allepey.jpg" alt="Alleppey" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-black/50 rounded-lg flex flex-col justify-end">
+                            <div class="p-4 space-y-2">
+                                <p class="text-white text-xl font-bold">Kerala Alleppey & Kumarakom</p>
+                                <p class="text-blue-400 text-sm">(2 Days)</p>
+                                <div class="overflow-y-auto transition-all duration-300 max-h-0" id="alleppeyDetails">
+                                    <ul class="text-gray-200 text-sm space-y-1 list-disc list-inside mb-2 pr-2">
+                                        <li>Alleppey boat house Stay</li>
+                                        <li>Kumarakom Bird Sanctuary</li>
+                                        <li>Vembanad Lake</li>
+                                    </ul>
+                                </div>
+                                <button onclick="toggleDetails('alleppeyDetails', this)" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                                    View More →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kerala Kochi Package -->
+                    <div class="flex-none w-72 snap-center relative group">
+                        <img src="images/kochi.avif" alt="Kochi" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-black/50 rounded-lg flex flex-col justify-end">
+                            <div class="p-4 space-y-2">
+                                <p class="text-white text-xl font-bold">Kerala Kochi</p>
+                                <p class="text-blue-400 text-sm">(1 Day)</p>
+                                <div class="overflow-y-auto transition-all duration-300 max-h-0" id="kochiDetails">
+                                    <ul class="text-gray-200 text-sm space-y-1 list-disc list-inside mb-2 pr-2">
+                                        <li>Chinese Fishing Nets</li>
+                                        <li>Fort Kochi</li>
+                                        <li>Marine Drive</li>
+                                        <li>Mattancherry Palace</li>
+                                        <li>Sunset cruise on the Arabian Sea</li>
+                                    </ul>
+                                </div>
+                                <button onclick="toggleDetails('kochiDetails', this)" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                                    View More →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kerala Wayanad Package -->
+                    <div class="flex-none w-72 snap-center relative group">
+                        <img src="images/wayanad.webp" alt="Wayanad" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-black/50 rounded-lg flex flex-col justify-end">
+                            <div class="p-4 space-y-2">
+                                <p class="text-white text-xl font-bold">Kerala Wayanad</p>
+                                <p class="text-blue-400 text-sm">(2 Days)</p>
+                                <div class="overflow-y-auto transition-all duration-300 max-h-0" id="wayanadDetails">
+                                    <ul class="text-gray-200 text-sm space-y-1 list-disc list-inside mb-2 pr-2">
+                                        <li>Edakkal Caves</li>
+                                        <li>Banasura Sagar Dam</li>
+                                        <li>Muthanga Wildlife Sanctuary</li>
+                                        <li>Soochipara Waterfalls</li>
+                                        <li>Pookode Lake</li>
+                                        <li>Lakkidi Viewpoint</li>
+                                    </ul>
+                                </div>
+                                <button onclick="toggleDetails('wayanadDetails', this)" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                                    View More →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Karnataka Mysore Package -->
+                    <div class="flex-none w-72 snap-center relative group">
+                        <img src="images/mysore.jpg" alt="Mysore" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-black/50 rounded-lg flex flex-col justify-end">
+                            <div class="p-4 space-y-2">
+                                <p class="text-white text-xl font-bold">Karnataka Mysore Package</p>
+                                <p class="text-blue-400 text-sm">(2 Days)</p>
+                                <div class="overflow-y-auto transition-all duration-300 max-h-0" id="mysoreDetails">
+                                    <ul class="text-gray-200 text-sm space-y-1 list-disc list-inside mb-2 pr-2">
+                                        <li>Mysore Palace</li>
+                                        <li>Chamundi Hills</li>
+                                        <li>St. Philomena's Church</li>
+                                        <li>Brindavan Gardens & Musical Fountain Show</li>
+                                    </ul>
+                                </div>
+                                <button onclick="toggleDetails('mysoreDetails', this)" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                                    View More →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Karnataka Coorg & Mangalore Package -->
+                    <div class="flex-none w-72 snap-center relative group">
+                        <img src="images/coorg.jpg" alt="Coorg" class="w-full h-64 object-cover rounded-lg shadow-lg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 to-black/50 rounded-lg flex flex-col justify-end">
+                            <div class="p-4 space-y-2">
+                                <p class="text-white text-xl font-bold">Karnataka Coorg & Mangalore Package</p>
+                                <p class="text-blue-400 text-sm">(3 Days)</p>
+                                <div class="overflow-y-auto transition-all duration-300 max-h-0" id="coorgDetails">
+                                    <ul class="text-gray-200 text-sm space-y-1 list-disc list-inside mb-2 pr-2">
+                                        <li>Golden Temple (Namdroling Monastery)</li>
+                                        <li>Nisargadhama</li>
+                                        <li>Abbey Falls</li>
+                                        <li>Raja Seat</li>
+                                        <li>Dubare Elephant Camp</li>
+                                        <li>Madikeri Fort & Omkareshwara Temple</li>
+                                        <li>Kadri Manjunath Temple</li>
+                                        <li>Mangaladevi Temple</li>
+                                        <li>Tannirbhavi Beach</li>
+                                        <li>Pilikula Nisargadhama & Sultan Battery</li>
+                                    </ul>
+                                </div>
+                                <button onclick="toggleDetails('coorgDetails', this)" class="text-blue-400 hover:text-blue-300 text-sm font-medium">
+                                    View More →
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function toggleAllPackages() {
+                    const additionalPackages = document.getElementById('additionalPackages');
+                    const viewAllButton = document.getElementById('viewAllButton');
+                    
+                    if (additionalPackages.classList.contains('hidden')) {
+                        additionalPackages.classList.remove('hidden');
+                        viewAllButton.classList.add('hidden');
+                    }
+                }
+            </script>
+</div>
+</div>
+            
+
+    <!-- Vehicles Section -->
+    <section class="py-16 px-4 bg-white">
+        <h2 class="text-3xl text-center font-bold mb-12 text-blue-400">Vehicles we offer</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto">
+            <div class="text-center bg-white rounded-lg p-6 border-2 border-blue-400 hover:border-blue-500 shadow-lg hover:shadow-blue-400/30 transition-all duration-300 transform hover:scale-105 group">
+                <div class="h-48 flex items-center justify-center mb-4 relative overflow-hidden">
+                    <img src="images/SWIFT.png" alt="Sedan" class="w-64 h-40 object-contain group-hover:scale-110 transition-transform duration-300">
+                </div>
+                <p class="font-bold text-xl text-blue-400 group-hover:text-blue-300">SEDAN</p>
+                <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="text-sm text-gray-400">Luxury Comfort for 4</span>
+                </div>
+            </div>
+            <div class="text-center bg-white rounded-lg p-6 border-2 border-blue-400 hover:border-blue-500 shadow-lg hover:shadow-blue-400/30 transition-all duration-300 transform hover:scale-105 group">
+                <div class="h-48 flex items-center justify-center mb-4 relative overflow-hidden">
+                    <img src="images/ertiga.png" alt="Ertiga" class="w-64 h-40 object-contain group-hover:scale-110 transition-transform duration-300">
+                </div>
+                <p class="font-bold text-xl text-blue-400 group-hover:text-blue-300">ERTIGA</p>
+                <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="text-sm text-gray-400">Spacious Travel for 6</span>
+                </div>
+            </div>
+            <div class="text-center bg-white rounded-lg p-6 border-2 border-blue-400 hover:border-blue-500 shadow-lg hover:shadow-blue-400/30 transition-all duration-300 transform hover:scale-105 group">
+                <div class="h-48 flex items-center justify-center mb-4 relative overflow-hidden">
+                    <img src="images/innova.png" alt="Innova" class="w-64 h-40 object-contain group-hover:scale-110 transition-transform duration-300">
+                </div>
+                <p class="font-bold text-xl text-blue-400 group-hover:text-blue-300">INNOVA CRYSTA</p>
+                <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="text-sm text-gray-400">Premium Travel for 7</span>
+                </div>
+            </div>
+            <div class="text-center bg-white rounded-lg p-6 border-2 border-blue-400 hover:border-blue-500 shadow-lg hover:shadow-blue-400/30 transition-all duration-300 transform hover:scale-105 group">
+                <div class="h-48 flex items-center justify-center mb-4 relative overflow-hidden">
+                    <img src="images/INNOVAAABG.jpeg" alt="Tempo Traveller" class="w-64 h-40 object-contain group-hover:scale-110 transition-transform duration-300">
+                </div>
+                <p class="font-bold text-xl text-blue-400 group-hover:text-blue-300">INNOVA</p>
+                <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="text-sm text-gray-400">Group Travel for 7</span>
+                </div>
+            </div>
+            <div class="text-center bg-white rounded-lg p-6 border-2 border-blue-400 hover:border-blue-500 shadow-lg hover:shadow-blue-400/30 transition-all duration-300 transform hover:scale-105 group">
+                <div class="h-48 flex items-center justify-center mb-4 relative overflow-hidden">
+                    <img src="images/Coach21.png" alt="21 Seater Coach" class="w-64 h-40 object-contain group-hover:scale-110 transition-transform duration-300">
+                </div>
+                <p class="font-bold text-xl text-blue-400 group-hover:text-blue-300">COACH 21 & 25SEATER</p>
+                <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="text-sm text-gray-400">Large Group Travel</span>
+                </div>
+            </div>
+            <div class="text-center bg-white rounded-lg p-6 border-2 border-blue-400 hover:border-blue-500 shadow-lg hover:shadow-blue-400/30 transition-all duration-300 transform hover:scale-105 group">
+                <div class="h-48 flex items-center justify-center mb-4 relative overflow-hidden">
+                    <img src="images/travellerbg.png" alt="25 Seater Coach" class="w-64 h-40 object-contain group-hover:scale-110 transition-transform duration-300">
+                </div>
+                <p class="font-bold text-xl text-blue-400 group-hover:text-blue-300">TEMPO TRAVELLER</p>
+                <div class="mt-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <span class="text-sm text-gray-400">Extended Group Travel</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Self Rental Promotion -->
+    <section class="py-8 px-4 bg-white">
+        <div class="max-w-6xl mx-auto bg-blue-400 rounded-2xl overflow-hidden shadow-xl">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Left side - Image -->
+                <div class="md:w-1/2">
+                    <img src="images/RENTAL SELF.avif" alt="Self Drive Car" class="w-full h-full object-cover">
+                </div>
+                
+                <!-- Right side - Content -->
+                <div class="md:w-1/2 p-8 md:p-12">
+                    <div class="inline-block bg-white px-4 py-2 rounded-full mb-6">
+                        <span class="text-blue-400 font-bold flex items-center">
+                            <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            EXCLUSIVE
+                        </span>
+                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Self-Drive Cars Available</h2>
+                    <p class="text-white/90 text-lg mb-8">Experience the freedom of driving yourself with our premium self-drive car rental service. Available for daily, weekly, and monthly rentals.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer id="footer" class="py-12 px-4 bg-white/80 border-t border-blue-400/20">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-start justify-between gap-8">
+            <!-- Left Side - Logo -->
+            <div class="flex flex-col items-center md:items-start">
+                <img src="images/logo.png" alt="Vativu Logo" class="h-20 mb-4">
+                <p class="text-gray-400 text-sm max-w-md">Your trusted partner for safe and comfortable travel experiences across South India.</p>
+            </div>
+    
+            <!-- Right Side - Contact & Social -->
+            <div class="flex flex-col md:flex-row gap-12">
+                <!-- Contact Information -->
+                <div class="space-y-4">
+                    <h4 class="text-xl font-bold text-blue-400 mb-4">Contact Us</h4>
+                    <div class="space-y-2">
+                        <p class="text-gray-300 flex items-center gap-2">
+                            <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            +91 98765 43210
+                        </p>
+                        <p class="text-gray-300 flex items-start gap-2">
+                            <svg class="w-5 h-5 text-blue-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                            </svg>
+                            <span>123 Travel Street,<br>Coimbatore, Tamil Nadu,<br>India - 641001</span>
+                        </p>
+                    </div>
+                </div>
+    
+                <!-- Social Media -->
+                <div class="space-y-4">
+                    <h4 class="text-xl font-bold text-blue-400 mb-4">Follow Us</h4>
+                    <div class="flex gap-4">
+                        <a href="#" class="bg-blue-400 p-2 rounded-full hover:bg-blue-500 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.06 1.805.249 2.227.419.562.217.96.477 1.382.896.419.42.679.819.896 1.381.17.422.36 1.057.419 2.227.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.06 1.17-.249 1.805-.419 2.227-.217.562-.477.96-.896 1.382-.419.419.819.679-1.381.896.422-.17 1.057-.36 2.227-.419 1.266-.058 1.646-.07 4.85-.07z"/>
+                                <path d="M12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-7.622a4.622 4.622 0 1 0 0 9.244 4.622 4.622 0 0 0 0-9.244zm5.884-.182a1.08 1.08 0 1 1-2.16 0 1.08 1.08 0 0 1 2.16 0z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/919876543210" class="bg-blue-400 p-2 rounded-full hover:bg-blue-500 transition-colors duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+<!-- Add this script at the end of the body tag -->
+<script>
+    function toggleDetails(elementId, button) {
+        const element = document.getElementById(elementId);
+        if (element.style.maxHeight === "0px") {
+            element.style.maxHeight = "200px"; // Increased fixed height
+            button.textContent = "View Less ↑";
+        } else {
+            element.style.maxHeight = "0px";
+            button.textContent = "View More →";
+        }
+    }
+</script>
+
+<!-- Add this style in the head section -->
+<style>
+    /* Custom scrollbar styles */
+    #ootyDetails {
+        scrollbar-width: thin;
+        scrollbar-color: #60A5FA transparent;
+    }
+    
+    #ootyDetails::-webkit-scrollbar {
+        width: 4px;
+    }
+    
+    #ootyDetails::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    
+    #ootyDetails::-webkit-scrollbar-thumb {
+        background-color: #60A5FA;
+        border-radius: 20px;
+    }
+    
+    /* Add padding for better scrolling experience */
+    #ootyDetails ul {
+        padding-right: 8px;
+    }
+</style>
